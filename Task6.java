@@ -17,4 +17,38 @@ public class Task6 {
     public long getSumLong(long n){
         return  (2 * startValue + stepValue * (n - 1)) * n / 2;
     }
+
+    public int checkMaxForInt(){
+        int prev = startValue;
+        int last = startValue;
+        int n =1;
+
+        while ( last >= prev) {
+            last =  (2 * startValue + stepValue * (n - 1)) * n / 2;
+
+                if(last > 0){
+                    n++;
+                    prev = last;
+                }else n--;
+        }
+
+        return n;
+    }
+
+    public long checkMaxForLong(){
+        long prev = startValue;
+        long last = startValue;
+        long n =1;
+
+        while ( last >= prev) {
+            last =  (2 * startValue + stepValue * (n - 1)) * n / 2;
+
+            if(last > 0){
+                n++;
+                prev = last;
+            }else n--;
+        }
+
+        return n;
+    }
 }

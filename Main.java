@@ -34,7 +34,9 @@ public class Main {
  */
 
 //        Task6 task6 = new Task6(1, 10000);
+//        System.out.println(task6.checkMaxForInt());
 //        System.out.println(task6.getSumInt(463));  // 463 - max value of n  for int
+//        System.out.println(task6.checkMaxForLong());
 //        System.out.println(task6.getSumLong(30370005));  // 30370005 - max value of n  for long
 
 
