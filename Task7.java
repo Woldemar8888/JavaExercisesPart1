@@ -1,4 +1,4 @@
-package theme_4;
+package by.epamtc.aladzyin.theme_4;
 
 public class Task7 {
     private double d;

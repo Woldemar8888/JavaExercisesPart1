@@ -1,4 +1,4 @@
-package theme_4;
+package by.epamtc.aladzyin.theme_4;
 
 public class Task4 {
     public static double getFunctionValue(double x){

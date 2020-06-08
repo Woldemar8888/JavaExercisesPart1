@@ -1,11 +1,11 @@
-package theme_4;
+package by.epamtc.aladzyin.theme_4;
 
 public class Main {
 
     public static void main(String[] args)  {
 //        System.out.println(Task1.getResult(5.9, 6.1, 8.3));     //Task1
 
-//        new Task2().getDate(76);        //Task2
+        System.out.println(new Task2().getDate(65));        //Task2
 
 /*
   *    Task3
@@ -67,8 +67,8 @@ public class Main {
 *       Task10
  */
 
-        Task10 task10 = new  Task10();
-        task10.inputValues();
+//        Task10 task10 = new  Task10();
+//        task10.inputValues();
 
     }
 }
