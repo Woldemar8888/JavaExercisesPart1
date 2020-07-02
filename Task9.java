@@ -8,22 +8,22 @@ public class Task9 {
     }
 
     private int getSumOfDigits(int num){
-        int sum = 0;
+        int sumOfDigits = 0;
 
         for(int j =0; j <= num; j++){
-           sum += j;
+           sumOfDigits += j;
         }
 
-        return sum;
+        return sumOfDigits;
     }
 
     public long getMultipliedSums(){
-        long result = 1;
+        long multipliedSums = 1;
 
         for(int i = 2; i <= number; i++){
-            result *= getSumOfDigits(i);
+            multipliedSums *= getSumOfDigits(i);
         }
 
-        return result;
+        return multipliedSums;
     }
 }

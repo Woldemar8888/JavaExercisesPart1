@@ -9,9 +9,7 @@ public class Task10 {
     private boolean hasTheSame = false;
     private boolean isAlternating = true;
     private int countOfDigits;
-    private int countOfInfo = 1;
     private int last;
-
 
     public void inputValues(){
         Scanner in = new Scanner(System.in);
@@ -19,6 +17,7 @@ public class Task10 {
         while ( !endOfInput){
 
             System.out.print("Input a number: ");
+
             if(in.hasNextInt()){
                 int num = in.nextInt();
 
@@ -34,24 +33,28 @@ public class Task10 {
 
             } else {
                 System.out.println("Incorrect type");
-                inputValues();
+                in.nextLine();
             }
         }
 
         in.close();
 
-        if(countOfInfo > 0) getInfo();
-        countOfInfo--;
+        showInfo();
+
     }
 
     private void fillInfo(int num){
+
         if(countOfDigits >=1){
+
             if(num <= last){
                 isIncrease = false;
             }
-            if(num ==last) {
+
+            if(num == last) {
                 hasTheSame = true;
             }
+
             if((num > 0 && last > 0) || (num < 0 && last < 0)){
                 isAlternating = false;
             }
@@ -62,7 +65,8 @@ public class Task10 {
         }
     }
 
-    private void getInfo(){
+    private void showInfo(){
+
         if(countOfDigits < 2){
             System.out.println("There are not enough numbers for statistic");
         }else {

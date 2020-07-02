@@ -1,15 +1,15 @@
 package by.epamtc.aladzyin.theme_4;
 
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Task2 {
+    private String date = "";
 
     public String getDate( int dayNumber){
 
         if ( dayNumber < 1 || dayNumber > 365){
-            return "Incorrect day of year";
+            date = "Incorrect day of year";
         }
 
 /*
@@ -18,7 +18,7 @@ public class Task2 {
  */
 
         int month = 0;
-        int date = 1;
+        int monthDay = 1;
         int restOfDays = dayNumber;
 
         int [] countOfDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
@@ -41,7 +41,7 @@ public class Task2 {
         while ( restOfDays > 0){
 
             if(restOfDays <= countOfDays[month]){
-                date = restOfDays;
+                monthDay = restOfDays;
             }
 
             restOfDays -= countOfDays[month];
@@ -51,24 +51,20 @@ public class Task2 {
             }
         }
 
-        return  months[month] + " " + date;
-
+        date = months[month] + " " + monthDay;
 
 /*
     variant 2
  */
 
-
-//        String result = "";
-//
 //        Calendar calendar = Calendar.getInstance();
 //        calendar.set(2019, 0, 01);  // set any not a leap year (2019)
 //        calendar.add(Calendar.DAY_OF_YEAR, dayNumber - 1);
 //
 //        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMMM");
 //
-//        result = simpleDateFormat.format(calendar.getTime());
+//        date = simpleDateFormat.format(calendar.getTime());
 //
-//        return result;
+        return date;
     }
 }

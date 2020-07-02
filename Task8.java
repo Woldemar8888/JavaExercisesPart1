@@ -1,6 +1,7 @@
 package by.epamtc.aladzyin.theme_4;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Task8 {
     private int startValue;
@@ -13,8 +14,8 @@ public class Task8 {
         this.step = step;
     }
 
-    public ArrayList getResult(){
-        ArrayList<Integer> result = new ArrayList<>();
+    public List getResult(){
+        List<Integer> result = new ArrayList<>();
 
         for(int i = startValue; i <= endValue; i += step){
 
